@@ -1,0 +1,189 @@
+/* Mobile */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2e9e9;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 2.5px;
+  width: 100%; /* Full width for mobile */
+  margin-bottom: 10px; /* Spacing between cards */
+}
+
+img {
+  border-bottom: 2.5px solid rgb(255, 255, 255);
+  border-radius: 2.5px 2.5px 0 0;
+  height: auto;
+  width: 100%;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.header, .subheader {
+  margin: 0;
+}
+
+/* Tablet View */
+@media screen and (min-width: 768px) {
+  .card-container {
+      display: flex;
+      flex-direction: row;
+      background-color: #ccdcda;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start; /* Align items at the top */
+      row-gap: 20px;
+      column-gap: 20px;
+  }
+
+  .card {
+    width: calc(50% - 10px); /* 2 columns layout */
+    flex-grow: 2;  
+  }
+
+
+
+}
+
+/* Desktop View */
+@media screen and (min-width: 1200px) {
+  .card-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start; /* Align items at the top */
+      background-color: #353232;
+      row-gap: 20px;
+      column-gap: 20px; 
+  }
+
+  .card {
+      width: calc(33% - 10px); /* 3 columns layout */
+      align-items: flex-start; /* Align items at the top */
+    }
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background: #353232;
+}
+
+.header-container {
+  background-color: #660700;
+  color: #ffffff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.option-container {
+  background-color: #e2e2e2;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+}
+
+.button {
+  background-color: #660700;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #820900;
+}
+
+
+
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.subheader {
+  color: #660700;
+  font-size: 1.1rem;
+}
+
+.select-container {
+  position: relative;
+  width: 200px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: #660700;
+  color: #ffffff;
+  border: 1px solid #444c6e;
+  appearance: none; /* Remove default styling */
+  background-image: url('custom-arrow.svg'); /* Custom arrow icon */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+}
+
+select:hover,
+select:focus {
+  border-color: #750901;
+  background-color: #660700;
+}
+
+/* Custom dropdown styling */
+.select-container:after {
+  content: '';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #ffffff;
+}
+
+/* Improving the look on focus and hover */
+select:hover,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(102, 119, 204, 0.5);
+}

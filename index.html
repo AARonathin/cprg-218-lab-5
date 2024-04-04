@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="fonts.css">
+  <link rel="stylesheet" type="text/css" href="global.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>API</title>
+</head>
+
+<body>
+  <header class="header-container">
+    <h1>Lab 5</h1>
+    <h2>APOD Generator</h2>
+  </header>
+  <section class="option-1">
+    <div class="option-container">
+      <h2>Random APOD</h2>
+      <p>Roll 4 random APOD's by clicking the button</p>
+      <button id="submit-button" class="button">Show Random APOD</button>
+    </div>
+    <div class="container">
+      <ul id="option-1-results" class="card-container"></ul>
+    </div>
+  </section>
+  <section class="option-2">
+    <div class="option-container">
+        <h2>Date Selector</h2>
+        <p>Find A specific APOD by inputing its date</p>
+        <select id="year-dropdown"></select>
+        <select id="month-dropdown"></select>
+        <select id="day-dropdown"></select>
+        <button id="select-date-button" class="button">Select Date</button>
+    </div>
+    <div class="container">
+        <ul id="option-2-results" class="card-container"></ul>
+    </div>
+</section>
+<section class="option-2-enhanced">
+  <div class="option-container">
+      <h2>Wide Search</h2>
+      <p>Select a start and end date to find APOD's from that timeframe</p>
+      Start Date:
+      <select id="start-year-dropdown"></select>
+      <select id="start-month-dropdown"></select>
+      <select id="start-day-dropdown"></select>
+      End Date:
+      <select id="end-year-dropdown"></select>
+      <select id="end-month-dropdown"></select>
+      <select id="end-day-dropdown"></select>
+      <button id="select-range-button" class="button">Select Range</button>
+  </div>
+  <div class="container">
+      <ul id="option-2-enhanced-results" class="card-container"></ul>
+  </div>
+</section>
+  <script src="scripts.js" defer></script>
+</body>
+
+</html>
